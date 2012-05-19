@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <cmath>
+#include <iomanip>
+#include <set>
+#include <map>
+#include <queue>
+
+using namespace std;
+
+int main (int argc, char const* argv[]){
+
+    string str;
+    int k;
+    cin >> str >> k;
+    
+    string subsets[(long long)(pow(2,str.length()))];
+    
+    int id = 0;
+    
+    for(unsigned int i = 0; i < str.length(); i += 1){
+        string subject = str.substr(i);
+        
+        for(unsigned int j = 0; j < subject.length(); j += 1){
+            subsets[id] = subject.substr(0,j+1);
+            id++;
+        }
+    }
+
+    sort(subsets + 0, subsets + id);
+
+    /*
+    for(unsigned int i = 0; i < subsets.size(); i += 1){
+        cout << subsets[i] << endl;
+    }
+    */
+    
+    cout << subsets[k-1] << endl;
+
+
+    return 0;
+}

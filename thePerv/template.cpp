@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <cmath>
+#include <iomanip>
+#include <set>
+#include <map>
+
+using namespace std;
+
+int main (int argc, char const* argv[]){
+
+    return 0;
+}

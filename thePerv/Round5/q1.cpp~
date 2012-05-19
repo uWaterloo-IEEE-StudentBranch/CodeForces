@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <cmath>
+#include <iomanip>
+#include <set>
+#include <map>
+#include <queue>
+
+using namespace std;
+
+int main (int argc, char const* argv[]){
+
+    string str;
+    int numppl = 0;
+    int traffic = 0;
+    
+    while(getline(cin, str)){
+        
+        cout << str << endl;
+        
+        if(str[0] == '+'){
+            numppl++;
+        }
+        else if(str[0] == '-'){
+            numppl--;
+        }
+        else{
+            int id = str.find(":");
+            cout << "id: " << id << " " << str.length() << endl;
+            traffic += (str.length() - 1 - id)*numppl;
+        }
+        
+    }
+    
+    cout << traffic << endl;
+
+    return 0;
+}
