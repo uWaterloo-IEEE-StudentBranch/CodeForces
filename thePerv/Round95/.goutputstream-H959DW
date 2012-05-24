@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <cmath>
+#include <iomanip>
+#include <set>
+#include <map>
+#include <queue>
+
+using namespace std;
+
+int main(int argc, char const* argv[]){
+
+    int dx[] = {0,1,1,1,0,-1,-1,-1};
+    int dy[] = {1,1,0,-1,-1,-1,0,1};
+    
+    int n, m;
+    cin >> n >> m;
+    
+    bool board[n][n];
+    bool threaten[m][m];    //if threaten[i][j], then threaten[j][i]. threaten[i][i] = false always
+    int queen[m][2];
+    
+    for(int i = 0; i < n; i++)
+        for(int j = 0; j < n; j++)
+            board[i][j] = false;
+    
+    for(int i = 0; i < m; i++)
+        for(int j = 0; j < m; j++)
+            threaten[i][j] = false;
+            
+    for(unsigned int i = 0; i < m; i += 1){
+        int r, c;
+        cin >> r >> c;
+        board[r][c] = true;
+        queen[i][0] = r;
+        queen[i][1] = c;
+    }
+
+    for(int z = 0; z < m; z++){
+        for(int a = 0; a < 8; a++){
+            
+        }
+    }
+
+    return 0;
+}
